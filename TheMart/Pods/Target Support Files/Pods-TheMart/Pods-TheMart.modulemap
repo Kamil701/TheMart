@@ -1,0 +1,6 @@
+framework module Pods_TheMart {
+  umbrella header "Pods-TheMart-umbrella.h"
+
+  export *
+  module * { export * }
+}
