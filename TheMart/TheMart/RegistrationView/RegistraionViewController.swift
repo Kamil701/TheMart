@@ -7,6 +7,8 @@
 
 import UIKit
 import SnapKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class RegistraionViewController: UIViewController {
     
@@ -17,8 +19,22 @@ class RegistraionViewController: UIViewController {
         return stackView
     }()
     
-    private lazy var textField = TextField()
-    private lazy var continueButton = BasicButton()
+    private lazy var emailTextField: TextField = {
+        let text = TextField()
+        text.textColor = .black
+        return text
+    }()
+    
+    private lazy var passwordTextField: TextField = {
+        let text = TextField()
+        text.textColor = .black
+        return text
+    }()
+    
+    private lazy var continueButton: BasicButton = {
+        let button = BasicButton()
+        return button
+    }()
     
     private lazy var imageView: BasicImage = {
         let imageView = BasicImage()
@@ -31,12 +47,18 @@ class RegistraionViewController: UIViewController {
         super.viewDidLoad()
         makeLayout()
         makeConstraints()
+        if let user = Auth.auth().currentUser?.uid {
+            print("user already logged")
+        } else {
+            print("User not exist in system")
+        }
     }
     
     private func makeLayout() {
         view.addSubview(stackView)
         
-        stackView.addArrangedSubview(textField)
+        stackView.addArrangedSubview(emailTextField)
+        stackView.addArrangedSubview(passwordTextField)
         stackView.addArrangedSubview(continueButton)
         
         view.addSubview(imageView)
@@ -49,7 +71,8 @@ class RegistraionViewController: UIViewController {
             make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
             
-            textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            passwordTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+            emailTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
             continueButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
             
         }
@@ -61,6 +84,23 @@ class RegistraionViewController: UIViewController {
             
         }
     }
+    
+    @objc func registrationAction() {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text
+        else { return }
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
+            guard error == nil,
+                  let result
+            else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            self?.navigationController?.pushViewController(ProfileViewController(.init()), animated: true)
+        }
+    }
+    
     
 
 }
