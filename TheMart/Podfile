@@ -7,9 +7,5 @@ target 'TheMart' do
 
   # Pods for TheMart
 	pod 'SnapKit'
-	pod 'Firebase'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Database'
-	pod 'FirebaseStorage'
 
 end

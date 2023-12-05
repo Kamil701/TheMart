@@ -28,7 +28,8 @@ class TextField: UITextField {
         textField.placeholder = "Номер телефона"
         textField.leftViewMode = .always
         textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-        //textField.backgroundColor = .white
+        textField.backgroundColor = .white
+        textField.textColor = .white
         textField.layer.masksToBounds = true
         return textField
     }()

@@ -30,7 +30,6 @@ class FilialsViewController: BasicViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = .systemGray4
-        tableView.separatorStyle = .none
         tableView.register(CustomCell.self, forCellReuseIdentifier: String(describing: CustomCell.self))
         return tableView
     }()

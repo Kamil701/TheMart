@@ -21,9 +21,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>OpenSans-Italic-VariableFont_wdth,wght</string>
-	</array>
 </dict>
 </plist>
