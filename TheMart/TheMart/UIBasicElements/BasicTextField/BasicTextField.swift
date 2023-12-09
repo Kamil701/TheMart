@@ -8,31 +8,89 @@
 import UIKit
 import Combine
 
-class TextField: UITextField {
+class BasicTextField: UITextField {
     var cancellables: Set<AnyCancellable> = []
     
-    init() {
+    init(style: Style = .forEmail) {
         super.init(frame: .zero)
-        makeLayout()
-        makeConstraints()
-        
+        setStyle(style)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private lazy var phoneNumberTextField: UITextField = {
-        let textField = UITextField()
-        textField.layer.cornerRadius = 8
-        textField.placeholder = "Номер телефона"
-        textField.leftViewMode = .always
-        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-        textField.backgroundColor = .white
-        textField.textColor = .white
-        textField.layer.masksToBounds = true
-        return textField
-    }()
+    private func setStyle(_ style: Style) {
+        switch style {
+        case .forAge:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.textColor = .black
+            self.layer.masksToBounds = true
+            
+        case .forEmail:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.placeholder = "Введите email"
+            self.textColor = .black
+            self.layer.masksToBounds = true
+            
+        case .forName:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.textColor = .black
+            self.layer.masksToBounds = true
+            
+        case .forPassword:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.placeholder = "Введите пароль"
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.textColor = .black
+            self.isSecureTextEntry = true
+            self.layer.masksToBounds = true
+            
+        case .forSurname:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.textColor = .black
+            self.layer.masksToBounds = true
+            
+        case .phoneNumber:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.textColor = .black
+            self.layer.masksToBounds = true
+            
+        case .forEmailRegVC:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.textColor = .black
+            self.layer.masksToBounds = true
+            
+        case .forPasswordRegVC:
+            self.layer.cornerRadius = 8
+            self.leftViewMode = .always
+            self.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            self.backgroundColor = .white
+            self.isSecureTextEntry = true
+            self.textColor = .black
+            self.layer.masksToBounds = true
+        }
+    }
     
     func setViewModel(_ viewModel: ViewModel) {
         viewModel.$text.sink { [weak self] text in
@@ -40,16 +98,17 @@ class TextField: UITextField {
         }
         .store(in: &cancellables)
     }
-    
-    private func makeLayout() {
-        self.addSubview(phoneNumberTextField)
+}
+
+extension BasicTextField {
+    enum Style{
+        case forEmail
+        case forPassword
+        case forName
+        case forSurname
+        case forAge
+        case phoneNumber
+        case forEmailRegVC
+        case forPasswordRegVC
     }
-    
-    private func makeConstraints() {
-        phoneNumberTextField.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-    }
-    
-    
 }

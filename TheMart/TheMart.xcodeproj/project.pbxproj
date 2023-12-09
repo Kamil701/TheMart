@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60475ABD2B1F22CF00B143D4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60475ABC2B1F22CF00B143D4 /* GoogleService-Info.plist */; };
+		60475AC02B204EAF00B143D4 /* TextValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60475ABF2B204EAF00B143D4 /* TextValue.swift */; };
+		60475AC42B218A8000B143D4 /* NavigatedRegistrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60475AC32B218A8000B143D4 /* NavigatedRegistrVC.swift */; };
+		60475AC72B24BB7A00B143D4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60475AC62B24BB7A00B143D4 /* ProfileViewController.swift */; };
+		60475AC92B24BB8A00B143D4 /* ProfileVC+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60475AC82B24BB8A00B143D4 /* ProfileVC+VM.swift */; };
+		60475ACE2B24BD9B00B143D4 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60475ACD2B24BD9B00B143D4 /* ProfileViewCell.swift */; };
+		60475AD02B24BDA900B143D4 /* ProfileViewCell+VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60475ACF2B24BDA900B143D4 /* ProfileViewCell+VM.swift */; };
 		6067678F2ADFA0EC0077280A /* BasicButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6067678E2ADFA0EC0077280A /* BasicButton.swift */; };
 		606767912ADFA0F80077280A /* BasicButton+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606767902ADFA0F80077280A /* BasicButton+ViewModel.swift */; };
 		606767952ADFEE2C0077280A /* FilialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606767942ADFEE2C0077280A /* FilialsViewController.swift */; };
@@ -35,6 +42,13 @@
 
 /* Begin PBXFileReference section */
 		4710A026587A73AD2B36EAE2 /* Pods-TheMart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMart.debug.xcconfig"; path = "Target Support Files/Pods-TheMart/Pods-TheMart.debug.xcconfig"; sourceTree = "<group>"; };
+		60475ABC2B1F22CF00B143D4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		60475ABF2B204EAF00B143D4 /* TextValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextValue.swift; sourceTree = "<group>"; };
+		60475AC32B218A8000B143D4 /* NavigatedRegistrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatedRegistrVC.swift; sourceTree = "<group>"; };
+		60475AC62B24BB7A00B143D4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		60475AC82B24BB8A00B143D4 /* ProfileVC+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+VM.swift"; sourceTree = "<group>"; };
+		60475ACD2B24BD9B00B143D4 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
+		60475ACF2B24BDA900B143D4 /* ProfileViewCell+VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileViewCell+VM.swift"; sourceTree = "<group>"; };
 		6067678E2ADFA0EC0077280A /* BasicButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicButton.swift; sourceTree = "<group>"; };
 		606767902ADFA0F80077280A /* BasicButton+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BasicButton+ViewModel.swift"; sourceTree = "<group>"; };
 		606767942ADFEE2C0077280A /* FilialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilialsViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +98,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		60475ABE2B204EA200B143D4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				60475ABF2B204EAF00B143D4 /* TextValue.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		60475AC12B218A1F00B143D4 /* RegistrationVC */ = {
+			isa = PBXGroup;
+			children = (
+				60C8D0E32ADF01B500705AF9 /* RegistraionViewController.swift */,
+				60C8D0E52ADF01D000705AF9 /* RegistrationVC+VM.swift */,
+			);
+			path = RegistrationVC;
+			sourceTree = "<group>";
+		};
+		60475AC22B218A3200B143D4 /* RegistrationPresent */ = {
+			isa = PBXGroup;
+			children = (
+				60475AC32B218A8000B143D4 /* NavigatedRegistrVC.swift */,
+			);
+			path = RegistrationPresent;
+			sourceTree = "<group>";
+		};
+		60475AC52B24BB5A00B143D4 /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+				60475AC62B24BB7A00B143D4 /* ProfileViewController.swift */,
+				60475AC82B24BB8A00B143D4 /* ProfileVC+VM.swift */,
+			);
+			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		60475ACB2B24BD6200B143D4 /* FilialsViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				606767992ADFEF6C0077280A /* FilialsViewCell.swift */,
+				6067679B2ADFEF7E0077280A /* FilialsViewCell+VM.swift */,
+			);
+			path = FilialsViewCells;
+			sourceTree = "<group>";
+		};
+		60475ACC2B24BD7A00B143D4 /* ProfileViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				60475ACD2B24BD9B00B143D4 /* ProfileViewCell.swift */,
+				60475ACF2B24BDA900B143D4 /* ProfileViewCell+VM.swift */,
+			);
+			path = ProfileViewCells;
+			sourceTree = "<group>";
+		};
 		6067678D2ADFA0DB0077280A /* BasicButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +162,7 @@
 		606767922ADFE4740077280A /* UIBasicElements */ = {
 			isa = PBXGroup;
 			children = (
+				60475ABE2B204EA200B143D4 /* Common */,
 				60C8D0D42ADEFA0F00705AF9 /* BasicLabel */,
 				60C8D0D92ADEFD3800705AF9 /* BasicTextField */,
 				60C8D0E82ADF9DFC00705AF9 /* BasicImage */,
@@ -116,8 +183,8 @@
 		606767982ADFEF2E0077280A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				606767992ADFEF6C0077280A /* FilialsViewCell.swift */,
-				6067679B2ADFEF7E0077280A /* FilialsViewCell+VM.swift */,
+				60475ACC2B24BD7A00B143D4 /* ProfileViewCells */,
+				60475ACB2B24BD6200B143D4 /* FilialsViewCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -168,12 +235,14 @@
 		60C8D0BF2ADEF9CE00705AF9 /* TheMart */ = {
 			isa = PBXGroup;
 			children = (
+				60475ABC2B1F22CF00B143D4 /* GoogleService-Info.plist */,
 				606767A32AE105B50077280A /* BasicComponents */,
 				6067679D2ADFF2820077280A /* Models */,
 				606767982ADFEF2E0077280A /* Cells */,
-				606767932ADFEE100077280A /* FilialsView */,
 				606767922ADFE4740077280A /* UIBasicElements */,
 				60C8D0DE2ADF015800705AF9 /* RegistrationView */,
+				60475AC52B24BB5A00B143D4 /* ProfileVC */,
+				606767932ADFEE100077280A /* FilialsView */,
 				60C8D0C02ADEF9CE00705AF9 /* AppDelegate.swift */,
 				60C8D0C22ADEF9CE00705AF9 /* SceneDelegate.swift */,
 				60C8D0C42ADEF9CE00705AF9 /* ViewController.swift */,
@@ -206,8 +275,8 @@
 		60C8D0DE2ADF015800705AF9 /* RegistrationView */ = {
 			isa = PBXGroup;
 			children = (
-				60C8D0E32ADF01B500705AF9 /* RegistraionViewController.swift */,
-				60C8D0E52ADF01D000705AF9 /* RegistrationVC+VM.swift */,
+				60475AC22B218A3200B143D4 /* RegistrationPresent */,
+				60475AC12B218A1F00B143D4 /* RegistrationVC */,
 			);
 			path = RegistrationView;
 			sourceTree = "<group>";
@@ -291,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60C8D0CD2ADEF9D000705AF9 /* LaunchScreen.storyboard in Resources */,
+				60475ABD2B1F22CF00B143D4 /* GoogleService-Info.plist in Resources */,
 				60C8D0CA2ADEF9D000705AF9 /* Assets.xcassets in Resources */,
 				60C8D0C82ADEF9CE00705AF9 /* Main.storyboard in Resources */,
 			);
@@ -350,6 +420,8 @@
 				60C8D0DD2ADEFD5D00705AF9 /* BasicTextField+ViewModel.swift in Sources */,
 				60C8D0C52ADEF9CE00705AF9 /* ViewController.swift in Sources */,
 				606767A52AE105C90077280A /* BasicTableViewCell.swift in Sources */,
+				60475AD02B24BDA900B143D4 /* ProfileViewCell+VM.swift in Sources */,
+				60475AC42B218A8000B143D4 /* NavigatedRegistrVC.swift in Sources */,
 				60C8D0D62ADEFA3200705AF9 /* BasicLabel.swift in Sources */,
 				60C8D0C12ADEF9CE00705AF9 /* AppDelegate.swift in Sources */,
 				60C8D0D82ADEFA4000705AF9 /* BasicLabel+ViewModel.swift in Sources */,
@@ -357,12 +429,16 @@
 				606767972ADFEE3D0077280A /* FilialsVC+VM.swift in Sources */,
 				60C8D0EA2ADF9E0D00705AF9 /* BasicImage.swift in Sources */,
 				606767952ADFEE2C0077280A /* FilialsViewController.swift in Sources */,
+				60475AC02B204EAF00B143D4 /* TextValue.swift in Sources */,
 				60C8D0DB2ADEFD4A00705AF9 /* BasicTextField.swift in Sources */,
+				60475AC72B24BB7A00B143D4 /* ProfileViewController.swift in Sources */,
 				606767A72AE10D280077280A /* BasicViewController.swift in Sources */,
 				60C8D0E62ADF01D000705AF9 /* RegistrationVC+VM.swift in Sources */,
 				6067679C2ADFEF7E0077280A /* FilialsViewCell+VM.swift in Sources */,
+				60475ACE2B24BD9B00B143D4 /* ProfileViewCell.swift in Sources */,
 				60C8D0EC2ADF9E1A00705AF9 /* BasicImage+ViewModel.swift in Sources */,
 				60C8D0C32ADEF9CE00705AF9 /* SceneDelegate.swift in Sources */,
+				60475AC92B24BB8A00B143D4 /* ProfileVC+VM.swift in Sources */,
 				6067679A2ADFEF6C0077280A /* FilialsViewCell.swift in Sources */,
 				606767A02ADFFA1F0077280A /* FilialModel .swift in Sources */,
 			);

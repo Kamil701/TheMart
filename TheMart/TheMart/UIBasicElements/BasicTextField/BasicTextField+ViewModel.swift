@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension TextField {
+extension BasicTextField {
     final class ViewModel {
         @Published var text: String?
     }
