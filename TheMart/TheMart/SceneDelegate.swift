@@ -16,8 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.windowScene = windowScene
+<<<<<<< HEAD
         window?.rootViewController = RegistraionViewController()
         window?.rootViewController = UINavigationController(rootViewController: FilialsViewController(.init()))
+=======
+        window?.rootViewController = 
+>>>>>>> parent of cb2d5ab (commit_changes)
         window?.makeKeyAndVisible()
         guard let _ = (scene as? UIWindowScene) else { return }
     }
