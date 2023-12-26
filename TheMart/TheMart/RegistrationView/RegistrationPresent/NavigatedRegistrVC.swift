@@ -11,14 +11,14 @@ import FirebaseAuth
 
 class NavigatedRegistrVC: UIViewController {
     
-    private var mainStackView: UIStackView = {
+    private lazy var mainStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.spacing = 15
         return stackView
     }()
     
-    private var datePickerStackView: UIStackView = {
+    private lazy var datePickerStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.spacing = 5
@@ -118,69 +118,16 @@ class NavigatedRegistrVC: UIViewController {
     @objc private func createAccount() {
         guard let email = emailInput.text,
               let password = passwordInput.text,
-              let name = nameInput.text,
-              let surname = surnameInput.text,
-              let phoneNumber = phoneNumberInput.text
+              let user = Auth.auth().currentUser
         else { return }
-        
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] result, error in
-            guard error == nil, let _ = result else {
-                if let error = error {
-                    print(error.localizedDescription)
-                }
+            guard error == nil,
+                  let result
+            else {
+                print(error!.localizedDescription)
                 return
             }
-            
-            guard let user = Auth.auth().currentUser else { return }
-            
-            let userInfo = User(
-                id: nil,
-                name: name,
-                surname: surname,
-                phoneNumber: phoneNumber,
-                dateOfBirth: "11.09.2002",
-                purchaseAmount: "Общая сумма покупок",
-                cashBack: "Кешбек: 5%",
-                accumulation: "Ваши накопления: "
-            )
-            
-            Environment.ref.child("users/\(user.uid)/userinfo").childByAutoId().setValue(userInfo.asDict)
         }
     }
-
-    
-//    @objc private func createAccount() {
-//        guard let email = emailInput.text,
-//              let password = passwordInput.text,
-//              let name = nameInput.text,
-//              let surname = surnameInput.text,
-//              let phoneNumber = phoneNumberInput.text,
-//              let user = Auth.auth().currentUser
-//        else { return }
-//
-//        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-//            guard error == nil,
-//                  let result
-//            else {
-//                print(error!.localizedDescription)
-//                return
-//            }
-//        }
-//
-//        let userInfo = User(
-//            id: nil,
-//            name: name,
-//            surname: surname,
-//            phoneNumber: phoneNumber,
-//            dateOfBirth: "11.09.2002",
-//            purchaseAmount: "Общая сумма покупок",
-//            cashBack: "Кешбек: 5%",
-//            accumulation: "Ваши накопления: "
-//        )
-//
-//        Environment.ref.child("users/\(user.uid)/userinfo").childByAutoId().setValue(userInfo.asDict)
-//
-//
-//    }
     
 }
