@@ -13,11 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        FirebaseApp.configure()
-        
-=======
+
+//        FirebaseApp.configure()
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [
             .font: UIFont(name: "YourCustomFontName", size: 20) ?? UIFont.systemFont(ofSize: 20),
@@ -26,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().compactAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
->>>>>>> parent of 418cd4d (registrationView_commit)
-=======
+
 //        let appearance = UINavigationBarAppearance()
 //        appearance.titleTextAttributes = [
 //            .font: UIFont(name: "YourCustomFontName", size: 20) ?? UIFont.systemFont(ofSize: 20),
@@ -39,8 +35,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().compactAppearance = appearance
 //        UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
-        FirebaseApp.configure()
->>>>>>> parent of cb2d5ab (commit_changes)
+
+//        let appearance = UINavigationBarAppearance()
+//        appearance.titleTextAttributes = [
+//            .font: UIFont(name: "YourCustomFontName", size: 20) ?? UIFont.systemFont(ofSize: 20),
+//        ]
+//        
+//        appearance.backgroundColor = .black
+//        
+//        UINavigationBar.appearance().standardAppearance = appearance
+//        UINavigationBar.appearance().compactAppearance = appearance
+//        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
         return true
     }
 
