@@ -11,7 +11,7 @@ import Combine
 class BasicLabel: UILabel {
     var cancellables: Set<AnyCancellable> = []
     
-    init(alignment: NSTextAlignment = .left, text: String, style: Style = .forRegistrationVC) {
+    init(alignment: NSTextAlignment = .left, text: String? = nil, style: Style = .forRegistrationVC) {
         super.init(frame: .zero)
         self.textAlignment = alignment
         setStyle(style)
@@ -25,9 +25,25 @@ class BasicLabel: UILabel {
     private func setStyle(_ style: Style) {
         switch style {
         case .forRegistrationVC:
-            self.font = .boldSystemFont(ofSize: 15)
+            self.font = .boldSystemFont(ofSize: 17)
             self.textColor = UIColor(red: 255/255, green: 196/255, blue: 45/255, alpha: 1.0)
+        case .hiforProfileView:
+            self.font = .boldSystemFont(ofSize: 20)
+            self.textColor = .white
+        case .nameLabel:
+            self.font = .boldSystemFont(ofSize: 20)
+            self.textColor = .white
+        case .surnameLabel:
+            self.font = .boldSystemFont(ofSize: 20)
+            self.textColor = .white
+        case .phoneNumberLabel:
+            self.font = .systemFont(ofSize: 15)
+            self.textColor = .white
+        case .dateofBirthLabel:
+            self.font = .systemFont(ofSize: 15)
+            self.textColor = .white
         }
+        
     }
     
     func setViewModel(_ viewModel: ViewModel) {
@@ -41,5 +57,10 @@ class BasicLabel: UILabel {
 extension BasicLabel {
     enum Style {
         case forRegistrationVC
+        case hiforProfileView
+        case nameLabel
+        case surnameLabel
+        case phoneNumberLabel
+        case dateofBirthLabel
     }
 }

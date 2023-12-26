@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+extension ProfileViewController {
+    final class ViewModel {
+        var lables: [ProfileViewCell.ViewModel] = []
+    }
+}
