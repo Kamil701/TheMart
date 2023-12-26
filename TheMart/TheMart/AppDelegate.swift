@@ -14,8 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-
-//        FirebaseApp.configure()
         let appearance = UINavigationBarAppearance()
         appearance.titleTextAttributes = [
             .font: UIFont(name: "YourCustomFontName", size: 20) ?? UIFont.systemFont(ofSize: 20),
@@ -37,6 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
 
+
 //        let appearance = UINavigationBarAppearance()
 //        appearance.titleTextAttributes = [
 //            .font: UIFont(name: "YourCustomFontName", size: 20) ?? UIFont.systemFont(ofSize: 20),
@@ -48,6 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        UINavigationBar.appearance().compactAppearance = appearance
 //        UINavigationBar.appearance().scrollEdgeAppearance = appearance
         
+
         return true
     }
 
