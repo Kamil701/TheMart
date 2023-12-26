@@ -6,15 +6,26 @@
 //
 
 import UIKit
-import Firebase
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+<<<<<<< HEAD
         FirebaseApp.configure()
         
+=======
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [
+            .font: UIFont(name: "YourCustomFontName", size: 20) ?? UIFont.systemFont(ofSize: 20),
+        ]
+
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+>>>>>>> parent of 418cd4d (registrationView_commit)
         return true
     }
 

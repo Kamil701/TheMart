@@ -11,6 +11,7 @@ import Combine
 class BasicLabel: UILabel {
     var cancellables: Set<AnyCancellable> = []
     
+<<<<<<< HEAD
     init(alignment: NSTextAlignment = .left, text: String? = nil, style: Style = .forRegistrationVC) {
         super.init(frame: .zero)
         self.textAlignment = alignment
@@ -46,6 +47,8 @@ class BasicLabel: UILabel {
         
     }
     
+=======
+>>>>>>> parent of 418cd4d (registrationView_commit)
     func setViewModel(_ viewModel: ViewModel) {
         viewModel.$text.sink { [weak self] text in
             self?.text = text
@@ -54,6 +57,7 @@ class BasicLabel: UILabel {
     }
     
 }
+<<<<<<< HEAD
 extension BasicLabel {
     enum Style {
         case forRegistrationVC
@@ -64,3 +68,5 @@ extension BasicLabel {
         case dateofBirthLabel
     }
 }
+=======
+>>>>>>> parent of 418cd4d (registrationView_commit)
