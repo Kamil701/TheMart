@@ -10,6 +10,16 @@ import Combine
 
 class BasicLabel: UILabel {
     var cancellables: Set<AnyCancellable> = []
+    
+    
+    init(){
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func setViewModel(_ viewModel: ViewModel) {
         viewModel.$text.sink { [weak self] text in
             self?.text = text
